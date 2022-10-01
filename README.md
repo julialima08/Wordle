@@ -8,6 +8,10 @@
 
 ---
 
+![Wordle](https://thenetick.co.ke/storage/2022/01/wordle.png)
+
+---
+
 ### **_Description_**
 
 #### This is my own version of the popular game Wordle made with HTML, CSS, and vanilla Javascript. This game generates a random five letter word that the player must guess within six attempts.
