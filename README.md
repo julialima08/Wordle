@@ -36,7 +36,7 @@
 
 ##### If one of the letters in your word is correct but not in its correct place, the tile will turn yellow.
 
-#### You will have 6 chances to guess the randomized word. If you guess the word, you will move on to the next level. If you don't guess the word in 6 tries, you will have to start over with a new word.
+##### You will have 6 chances to guess the randomized word. If you guess the word, you will move on to the next level. If you don't guess the word in 6 tries, you will have to start over with a new word.
 
 ---
 
