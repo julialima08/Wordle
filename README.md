@@ -4,7 +4,7 @@
 
 ### By: Julia Lima
 
-#### [Github](https://github.com/julialima08) | [Linkedin](https://www.linkedin.com/in/julia-lima-279697249/) | [Instagram](https://www.instagram.com/julia._lima._/)
+#### [Github](https://github.com/julialima08) | [Linkedin](https://www.linkedin.com/in/julia-lima-279697249/) | [Trello](https://trello.com/invite/b/qMkhhrme/b6c9c3ad5c3dfc8abb7cd1fcf72dc78c/wordle-julia-lima)
 
 ---
 
