@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+body {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/007/190/729/original/abstract-psychedelic-retro-wave-background-free-vector.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Rajdhani', sans-serif;
+  height: 100vh;
+}
+
+.instructions {
+  background-color: #cf6d9e;
+  padding: 30px;
+  width: 800px;
+  border: 3px solid white;
+  align-self: center;
+}
+section {
+  display: flex;
+  justify-content: center;
+}
+button {
+  background-color: #4485c2;
+  height: 30px;
+  width: 110px;
+  font-size: 20px;
+  font-family: 'Rajdhani', sans-serif;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
