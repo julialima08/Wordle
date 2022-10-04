@@ -5,14 +5,147 @@ const message = document.querySelector('.message')
 let startRow = 0
 let startTile = 0
 
-let word = 'hello'
+const wordList = async () => {
+  let response = await axios.get( url:
+    'https://random-words5.p.rapidapi.com/getRandom',
+    params: { wordLength: '5' },
+    headers: {
+      'X-RapidAPI-Key': '7d3489c981mshd8b003a4a76fc64p1d5f38jsn5939fc8db612',
+      'X-RapidAPI-Host': 'random-words5.p.rapidapi.com'
+    })
+  console.log(response)
+}
+wordList()
+// let words = [
+//   'Alert',
+//   'Alive',
+//   'Audio',
+//   'Actor',
+//   'Angry',
+//   'Beach',
+//   'Birth',
+//   'Blame',
+//   'Basic',
+//   'Board',
+//   'Crash',
+//   'Crime',
+//   'Clear',
+//   'Cause',
+//   'Cycle',
+//   'Dance',
+//   'Delay',
+//   'Dozen',
+//   'Drawn',
+//   'Dying',
+//   'Early',
+//   'Enemy',
+//   'Enjoy',
+//   'Error',
+//   'Extra',
+//   'Fraud',
+//   'Fully',
+//   'Fight',
+//   'Floor',
+//   'Faith',
+//   'Globe',
+//   'Going',
+//   'Gross',
+//   'Given',
+//   'Guest',
+//   'Heart',
+//   'Heavy',
+//   'Hotel',
+//   'Human',
+//   'Happy',
+//   'Image',
+//   'Input',
+//   'Issue',
+//   'Irony',
+//   'Inner',
+//   'Juice',
+//   'Joint',
+//   'Judge',
+//   'juicy',
+//   'Known',
+//   'Knife',
+//   'Large',
+//   'Laugh',
+//   'Logic',
+//   'Lunch',
+//   'Lying',
+//   'Leave',
+//   'Media',
+//   'Minor',
+//   'Mouth',
+//   'Major',
+//   'Music',
+//   'Novel',
+//   'Newly',
+//   'North',
+//   'Nurse',
+//   'Needs',
+//   'Offer',
+//   'Order',
+//   'Other',
+//   'Other',
+//   'Ocean',
+//   'Paint',
+//   'Paper',
+//   'Photo',
+//   'Piece',
+//   'Place',
+//   'Queen',
+//   'Quiet',
+//   'Quick',
+//   'Quite',
+//   'Roman',
+//   'Rough',
+//   'River',
+//   'Ready',
+//   'Rural',
+//   'Serve',
+//   'Shall',
+//   'Sharp',
+//   'Shift',
+//   'Shown',
+//   'Sixty',
+//   'Taxes',
+//   'Touch',
+//   'Tower',
+//   'Trade',
+//   'Theft',
+//   'Upset',
+//   'Urban',
+//   'Usage',
+//   'Usual',
+//   'Unity',
+//   'Value',
+//   'Video',
+//   'Vital',
+//   'Virus',
+//   'Visit',
+//   'Woman',
+//   'Water',
+//   'Wheel',
+//   'While',
+//   'World',
+//   'yacht',
+//   'Yield',
+//   'Young',
+//   'Youth',
+//   'zappy',
+//   'zebra',
+//   'zilch'
+// ]
+
+// let word = words[Math.floor(Math.random() * words.length)]
 
 let popUp = document.querySelector('.popup')
 let close = document.querySelector('.close')
 let popUpMessage = document.querySelector('h4')
 let confettiFalling = document.querySelector('#my-canvas')
 
-const gameRows = [
+let gameRows = [
   ['', '', '', '', ''],
   ['', '', '', '', ''],
   ['', '', '', '', ''],
@@ -176,19 +309,6 @@ const tileColor = () => {
 const replayGame = () => {
   const replayButton = document.getElementById('replay')
   replayButton.addEventListener('click', () => {
-    endGame = false
-    popUp.classList.remove('active')
-    confettiFalling.classList.remove('active')
-    gameRows.forEach(() => {
-      startTile--
-      const tile = document.getElementById(
-        'row-' + startRow + 'tile-' + startTile
-      )
-      tile.classList.remove('green')
-      tile.classList.remove('yellow')
-      tile.classList.remove('grey')
-      tile.innerHTML = ''
-      gameRows[startRow][startTile] = ''
-    })
+    location.reload()
   })
 }
