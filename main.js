@@ -7,6 +7,11 @@ let startTile = 0
 
 let word = 'hello'
 
+let popUp = document.querySelector('.popup')
+let close = document.querySelector('.close')
+let popUpMessage = document.querySelector('h4')
+let confettiFalling = document.querySelector('#my-canvas')
+
 const gameRows = [
   ['', '', '', '', ''],
   ['', '', '', '', ''],
@@ -113,6 +118,16 @@ const checkRow = () => {
   if (startTile >= 4) {
     if (playerWord == word.toUpperCase()) {
       endGame = true
+      popUp.classList.add('active')
+      popUpMessage.innerText = `Correct!`
+      close.onclick = function () {
+        popUp.classList.remove('active')
+        confettiFalling.classList.remove('active')
+      }
+      confettiFalling.classList.add('active')
+      var confettiSettings = { target: 'my-canvas' }
+      var confetti = new ConfettiGenerator(confettiSettings)
+      confetti.render()
       return
     } else {
       if (startRow < 5) {
