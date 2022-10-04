@@ -5,17 +5,17 @@ const message = document.querySelector('.message')
 let startRow = 0
 let startTile = 0
 
-const wordList = async () => {
-  let response = await axios.get( url:
-    'https://random-words5.p.rapidapi.com/getRandom',
-    params: { wordLength: '5' },
-    headers: {
-      'X-RapidAPI-Key': '7d3489c981mshd8b003a4a76fc64p1d5f38jsn5939fc8db612',
-      'X-RapidAPI-Host': 'random-words5.p.rapidapi.com'
-    })
-  console.log(response)
-}
-wordList()
+// const wordList = async () => {
+//   let response = await axios.get(
+//     'https://random-words5.p.rapidapi.com/getRandom',
+//     params: { wordLength: '5' },
+//     headers: {
+//       'X-RapidAPI-Key': '7d3489c981mshd8b003a4a76fc64p1d5f38jsn5939fc8db612',
+//       'X-RapidAPI-Host': 'random-words5.p.rapidapi.com'
+//     })
+//   console.log(response)
+// }
+// wordList()
 // let words = [
 //   'Alert',
 //   'Alive',
