@@ -143,7 +143,7 @@ cursor: pointer;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background-color: lightblue;
+  background-color: #e0d1a8;
   width: 580px;
   height: 300px;
   box-shadow: 0 25px 50px rgba(0,0,0,0.1),
@@ -151,8 +151,11 @@ cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
-  border: 10px dotted rgb(251, 165, 7);
+  padding: 30px;
+  border: 10px solid white;
+  font-family: 'Bungee Shade', cursive;
+  color: #4485c2;
+  font-size: 80px;
   visibility: hidden;
 }
 
@@ -165,8 +168,9 @@ cursor: pointer;
   top: 0;
   right: 0;
   padding: 8px 20px;
-  background: black;
-  border: 2px solid #FFD042;
+  background: #4485c2;
+  color: white;
+  border: 2px solid white;
   cursor: pointer;
   font-size: 20px;
 }
@@ -183,4 +187,21 @@ cursor: pointer;
 
 #my-canvas.active {
   visibility: visible;
+}
+
+#replay {
+  width: 160px;
+  height: 60px;
+  text-align: center;
+  background: #4485c2;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 30px;
+  font-family: 'Bungee Shade', cursive;
+  margin-left: 170px;
+}
+
+h4 {
+  margin-left: 40px;
 }

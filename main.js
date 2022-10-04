@@ -120,6 +120,10 @@ const checkRow = () => {
       endGame = true
       popUp.classList.add('active')
       popUpMessage.innerText = `Correct!`
+      const replayButton = document.createElement('button')
+      replayButton.setAttribute('id', 'replay')
+      replayButton.innerText = 'replay'
+      popUpMessage.append(replayButton)
       close.onclick = function () {
         popUp.classList.remove('active')
         confettiFalling.classList.remove('active')
@@ -128,6 +132,7 @@ const checkRow = () => {
       var confettiSettings = { target: 'my-canvas' }
       var confetti = new ConfettiGenerator(confettiSettings)
       confetti.render()
+      replayGame()
       return
     } else {
       if (startRow < 5) {
@@ -137,6 +142,17 @@ const checkRow = () => {
       }
       if (startRow >= 5) {
         endGame = true
+        popUp.classList.add('active')
+        popUpMessage.innerText = `Nope! Try again`
+        close.onclick = function () {
+          popUp.classList.remove('active')
+          confettiFalling.classList.remove('active')
+        }
+        const replayButton = document.createElement('button')
+        replayButton.setAttribute('id', 'replay')
+        replayButton.innerText = 'replay'
+        popUpMessage.append(replayButton)
+        replayGame()
         return
       }
     }
@@ -154,5 +170,25 @@ const tileColor = () => {
     } else {
       tile.classList.add('grey')
     }
+  })
+}
+
+const replayGame = () => {
+  const replayButton = document.getElementById('replay')
+  replayButton.addEventListener('click', () => {
+    endGame = false
+    popUp.classList.remove('active')
+    confettiFalling.classList.remove('active')
+    gameRows.forEach(() => {
+      startTile--
+      const tile = document.getElementById(
+        'row-' + startRow + 'tile-' + startTile
+      )
+      tile.classList.remove('green')
+      tile.classList.remove('yellow')
+      tile.classList.remove('grey')
+      tile.innerHTML = ''
+      gameRows[startRow][startTile] = ''
+    })
   })
 }
