@@ -143,7 +143,7 @@ const checkRow = () => {
         confetti.render()
         replayGame()
       }
-      setTimeout(popUpTime, 1000)
+      setTimeout(popUpTime, 3000)
       return
     } else {
       if (startRow < 5) {
@@ -166,7 +166,7 @@ const checkRow = () => {
           popUpMessage.append(replayButton)
           replayGame()
         }
-        setTimeout(popUpTime2, 1000)
+        setTimeout(popUpTime2, 3000)
         return
       }
     }
@@ -177,13 +177,17 @@ const tileColor = () => {
   const rowChildren = document.getElementById('row-' + startRow).childNodes
   rowChildren.forEach((tile, index) => {
     const letter = tile.getAttribute('data')
-    if (letter == word[index].toUpperCase()) {
-      tile.classList.add('green')
-    } else if (word.toUpperCase().includes(letter)) {
-      tile.classList.add('yellow')
-    } else {
-      tile.classList.add('grey')
-    }
+
+    setTimeout(() => {
+      tile.classList.add('flip')
+      if (letter == word[index].toUpperCase()) {
+        tile.classList.add('green')
+      } else if (word.toUpperCase().includes(letter)) {
+        tile.classList.add('yellow')
+      } else {
+        tile.classList.add('grey')
+      }
+    }, 500 * index)
   })
 }
 
