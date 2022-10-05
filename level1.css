@@ -50,7 +50,7 @@ h1 {
 
 div .Game-container {
   background-color: #e0d1a8;
-  height: 500px;
+  height: 490px;
   width: 400px; 
   margin-bottom: 10px;
   margin-top: 10px;
@@ -144,7 +144,7 @@ cursor: pointer;
   left: 50%;
   transform: translate(-50%,-50%);
   background-color: #e0d1a8;
-  width: 580px;
+  width: 700px;
   height: 300px;
   box-shadow: 0 25px 50px rgba(0,0,0,0.1),
   0 0 0 1000px rgba(0, 0, 0, 0.8);
@@ -199,9 +199,17 @@ cursor: pointer;
   cursor: pointer;
   font-size: 30px;
   font-family: 'Bungee Shade', cursive;
-  margin-left: 170px;
 }
 
-h4 {
-  margin-left: 40px;
+.level {
+  width: 180px;
+  height: 60px;
+  text-align: center;
+  background: #4485c2;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 30px;
+  font-family: 'Bungee Shade', cursive;
+  margin-top: 140px;
 }

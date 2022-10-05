@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+body {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/007/190/729/original/abstract-psychedelic-retro-wave-background-free-vector.jpg');
+  background-size: cover;
+}
+
+header {
+  background-color: #e0d1a8;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  color: #4485c2;
+  font-size: 50px;
+  justify-self: center;
+  line-height: 30px;
+  margin-left: 550px;
+}
+
+.instructions {
+  background-color: #4485c2;
+  color: white;
+  height: 40px;
+  width: 50px;
+  font-size: 30px;
+  font-family: 'Bungee Shade', cursive;
+  cursor: pointer;
+  padding-bottom: 40px;
+  margin-left: 500px;
+}
+
+.game {
+  height: 97vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div .Game-container {
+  background-color: #e0d1a8;
+  height: 490px;
+  width: 570px; 
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 7px;
+  border: 4px solid white;
+  box-sizing: border-box;
+}
+
+.Game-container div {
+  display: flex;
+}
+
+.Game-container .tile {
+  width: 70px;
+  height: 70px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  background-color: #db7287;
+  font-family: 'Bungee Shade', cursive;
+  color: white;
+  font-size: 50px;
+}
+
+div .message {
+  width: 200px;
+  height: 30px;
+  background-color: #e0d1a8;
+  font-size: 20px;
+  margin: 7px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+div .Keyboard {
+  background-color: #e0d1a8;
+  height: 220px;
+  width: 600px;
+  justify-content: center;
+  margin-bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 6px;
+  border: 4px solid white;
+}
+
+.Keyboard button {
+width: 45px;
+height: 45px;
+border-radius: 4px;
+border: 2px solid white;
+background-color: #4485c2;
+font-family: 'Bungee Shade', cursive;
+color: white;
+margin: 4px;
+font-size: 25px;
+cursor: pointer;
+}
+
+.Keyboard button:nth-child(28) {
+  width: 115px;
+}
+
+.Keyboard button:nth-child(20) {
+  width: 95px;
+}
+
+.Keyboard button:nth-child(11) {
+  margin-left: 25px;
+}
+
+.grey {
+  background-color: #949599 !important;
+}
+
+.yellow {
+  background-color: #edcb5a !important;
+}
+
+.green {
+  background-color: #63ad5f !important;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #e0d1a8;
+  width: 700px;
+  height: 300px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1),
+  0 0 0 1000px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 10px solid white;
+  font-family: 'Bungee Shade', cursive;
+  color: #4485c2;
+  font-size: 80px;
+  visibility: hidden;
+}
+
+.popup.active {
+  visibility: visible;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 20px;
+  background: #4485c2;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#my-canvas {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#my-canvas.active {
+  visibility: visible;
+}
+
+#replay {
+  width: 160px;
+  height: 60px;
+  text-align: center;
+  background: #4485c2;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 30px;
+  font-family: 'Bungee Shade', cursive;
+}
+
+.level {
+  width: 180px;
+  height: 60px;
+  text-align: center;
+  background: #4485c2;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 30px;
+  font-family: 'Bungee Shade', cursive;
+  margin-top: 140px;
+}

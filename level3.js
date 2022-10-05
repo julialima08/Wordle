@@ -8,9 +8,9 @@ let startTile = 0
 let word = ''
 const wordList = async () => {
   let response = await axios.get(
-    'https://random-word-api.herokuapp.com/word?number=1&length=5'
+    'https://random-word-api.herokuapp.com/word?number=1&length=7'
   )
-  console.log(response.data)
+  console.log(response.data[0])
   word = response.data[0]
 }
 wordList()
@@ -21,12 +21,12 @@ let popUpMessage = document.querySelector('h4')
 let confettiFalling = document.querySelector('#my-canvas')
 
 let gameRows = [
-  ['', '', '', '', ''],
-  ['', '', '', '', ''],
-  ['', '', '', '', ''],
-  ['', '', '', '', ''],
-  ['', '', '', '', ''],
-  ['', '', '', '', '']
+  ['', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', '']
 ]
 
 const keys = [
@@ -97,7 +97,7 @@ const keyClicked = (key) => {
 }
 
 const addLetter = (letter) => {
-  if (startTile < 5 && startRow < 6) {
+  if (startTile < 7 && startRow < 6) {
     const tile = document.getElementById(
       'row-' + startRow + 'tile-' + startTile
     )
@@ -123,7 +123,7 @@ const deleteLetter = () => {
 const checkRow = () => {
   const playerWord = gameRows[startRow].join('')
   tileColor()
-  if (startTile >= 4) {
+  if (startTile >= 6) {
     if (playerWord == word.toUpperCase()) {
       endGame = true
       const popUpTime = () => {
