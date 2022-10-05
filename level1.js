@@ -155,7 +155,7 @@ const checkRow = () => {
         endGame = true
         const popUpTime2 = () => {
           popUp.classList.add('active')
-          popUpMessage.innerText = `Nope! Try again`
+          popUpMessage.innerText = `Incorrect`
           close.onclick = function () {
             popUp.classList.remove('active')
             confettiFalling.classList.remove('active')

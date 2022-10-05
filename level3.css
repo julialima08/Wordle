@@ -151,7 +151,7 @@ cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 50px;
   border: 10px solid white;
   font-family: 'Bungee Shade', cursive;
   color: #4485c2;
@@ -199,6 +199,7 @@ cursor: pointer;
   cursor: pointer;
   font-size: 30px;
   font-family: 'Bungee Shade', cursive;
+  margin-left: 30px;
 }
 
 .level {
@@ -212,4 +213,5 @@ cursor: pointer;
   font-size: 30px;
   font-family: 'Bungee Shade', cursive;
   margin-top: 140px;
+  margin-right: 20px;
 }
