@@ -122,8 +122,8 @@ const deleteLetter = () => {
 
 const checkRow = () => {
   const playerWord = gameRows[startRow].join('')
-  tileColor()
-  if (startTile >= 6) {
+  if (startTile >= 7) {
+    tileColor()
     if (playerWord == word.toUpperCase()) {
       endGame = true
       const popUpTime = () => {
