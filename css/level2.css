@@ -12,20 +12,20 @@ header {
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 75px;
   border-top: 4px solid white;
   border-bottom: 4px solid white;
   box-sizing: border-box;
+  padding-left: 60px;
+  padding-right: 20px;
 }
 
 h1 {
   font-family: 'Bungee Shade', cursive;
   color: #4485c2;
   font-size: 50px;
-  justify-self: center;
   line-height: 30px;
-  margin-left: 550px;
 }
 
 .instructions {
@@ -37,7 +37,6 @@ h1 {
   font-family: 'Bungee Shade', cursive;
   cursor: pointer;
   padding-bottom: 40px;
-  margin-left: 500px;
 }
 
 .game {
