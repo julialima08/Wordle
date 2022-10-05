@@ -5,140 +5,15 @@ const message = document.querySelector('.message')
 let startRow = 0
 let startTile = 0
 
-// const wordList = async () => {
-//   let response = await axios.get(
-//     'https://random-words5.p.rapidapi.com/getRandom',
-//     params: { wordLength: '5' },
-//     headers: {
-//       'X-RapidAPI-Key': '7d3489c981mshd8b003a4a76fc64p1d5f38jsn5939fc8db612',
-//       'X-RapidAPI-Host': 'random-words5.p.rapidapi.com'
-//     })
-//   console.log(response)
-// }
-// wordList()
-// let words = [
-//   'Alert',
-//   'Alive',
-//   'Audio',
-//   'Actor',
-//   'Angry',
-//   'Beach',
-//   'Birth',
-//   'Blame',
-//   'Basic',
-//   'Board',
-//   'Crash',
-//   'Crime',
-//   'Clear',
-//   'Cause',
-//   'Cycle',
-//   'Dance',
-//   'Delay',
-//   'Dozen',
-//   'Drawn',
-//   'Dying',
-//   'Early',
-//   'Enemy',
-//   'Enjoy',
-//   'Error',
-//   'Extra',
-//   'Fraud',
-//   'Fully',
-//   'Fight',
-//   'Floor',
-//   'Faith',
-//   'Globe',
-//   'Going',
-//   'Gross',
-//   'Given',
-//   'Guest',
-//   'Heart',
-//   'Heavy',
-//   'Hotel',
-//   'Human',
-//   'Happy',
-//   'Image',
-//   'Input',
-//   'Issue',
-//   'Irony',
-//   'Inner',
-//   'Juice',
-//   'Joint',
-//   'Judge',
-//   'juicy',
-//   'Known',
-//   'Knife',
-//   'Large',
-//   'Laugh',
-//   'Logic',
-//   'Lunch',
-//   'Lying',
-//   'Leave',
-//   'Media',
-//   'Minor',
-//   'Mouth',
-//   'Major',
-//   'Music',
-//   'Novel',
-//   'Newly',
-//   'North',
-//   'Nurse',
-//   'Needs',
-//   'Offer',
-//   'Order',
-//   'Other',
-//   'Other',
-//   'Ocean',
-//   'Paint',
-//   'Paper',
-//   'Photo',
-//   'Piece',
-//   'Place',
-//   'Queen',
-//   'Quiet',
-//   'Quick',
-//   'Quite',
-//   'Roman',
-//   'Rough',
-//   'River',
-//   'Ready',
-//   'Rural',
-//   'Serve',
-//   'Shall',
-//   'Sharp',
-//   'Shift',
-//   'Shown',
-//   'Sixty',
-//   'Taxes',
-//   'Touch',
-//   'Tower',
-//   'Trade',
-//   'Theft',
-//   'Upset',
-//   'Urban',
-//   'Usage',
-//   'Usual',
-//   'Unity',
-//   'Value',
-//   'Video',
-//   'Vital',
-//   'Virus',
-//   'Visit',
-//   'Woman',
-//   'Water',
-//   'Wheel',
-//   'While',
-//   'World',
-//   'yacht',
-//   'Yield',
-//   'Young',
-//   'Youth',
-//   'zappy',
-//   'zebra',
-//   'zilch'
-// ]
-
-// let word = words[Math.floor(Math.random() * words.length)]
+let word = ''
+const wordList = async () => {
+  let response = await axios.get(
+    'https://random-word-api.herokuapp.com/word?number=1&length=5'
+  )
+  console.log(response.data)
+  word = response.data[0]
+}
+wordList()
 
 let popUp = document.querySelector('.popup')
 let close = document.querySelector('.close')
@@ -251,21 +126,24 @@ const checkRow = () => {
   if (startTile >= 4) {
     if (playerWord == word.toUpperCase()) {
       endGame = true
-      popUp.classList.add('active')
-      popUpMessage.innerText = `Correct!`
-      const replayButton = document.createElement('button')
-      replayButton.setAttribute('id', 'replay')
-      replayButton.innerText = 'replay'
-      popUpMessage.append(replayButton)
-      close.onclick = function () {
-        popUp.classList.remove('active')
-        confettiFalling.classList.remove('active')
+      const popUpTime = () => {
+        popUp.classList.add('active')
+        popUpMessage.innerText = `Correct!`
+        const replayButton = document.createElement('button')
+        replayButton.setAttribute('id', 'replay')
+        replayButton.innerText = 'replay'
+        popUpMessage.append(replayButton)
+        close.onclick = function () {
+          popUp.classList.remove('active')
+          confettiFalling.classList.remove('active')
+        }
+        confettiFalling.classList.add('active')
+        let confettiSettings = { target: 'my-canvas' }
+        let confetti = new ConfettiGenerator(confettiSettings)
+        confetti.render()
+        replayGame()
       }
-      confettiFalling.classList.add('active')
-      var confettiSettings = { target: 'my-canvas' }
-      var confetti = new ConfettiGenerator(confettiSettings)
-      confetti.render()
-      replayGame()
+      setTimeout(popUpTime, 1000)
       return
     } else {
       if (startRow < 5) {
@@ -275,17 +153,20 @@ const checkRow = () => {
       }
       if (startRow >= 5) {
         endGame = true
-        popUp.classList.add('active')
-        popUpMessage.innerText = `Nope! Try again`
-        close.onclick = function () {
-          popUp.classList.remove('active')
-          confettiFalling.classList.remove('active')
+        const popUpTime2 = () => {
+          popUp.classList.add('active')
+          popUpMessage.innerText = `Nope! Try again`
+          close.onclick = function () {
+            popUp.classList.remove('active')
+            confettiFalling.classList.remove('active')
+          }
+          const replayButton = document.createElement('button')
+          replayButton.setAttribute('id', 'replay')
+          replayButton.innerText = 'replay'
+          popUpMessage.append(replayButton)
+          replayGame()
         }
-        const replayButton = document.createElement('button')
-        replayButton.setAttribute('id', 'replay')
-        replayButton.innerText = 'replay'
-        popUpMessage.append(replayButton)
-        replayGame()
+        setTimeout(popUpTime2, 1000)
         return
       }
     }

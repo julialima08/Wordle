@@ -4,7 +4,7 @@
 
 ### By: Julia Lima
 
-#### [Github](https://github.com/julialima08) | [Linkedin](https://www.linkedin.com/in/julia-lima-279697249/) | [Instagram](https://www.instagram.com/julia._lima._/)
+#### [Github](https://github.com/julialima08) | [Linkedin](https://www.linkedin.com/in/julia-lima-279697249/) | [Trello](https://trello.com/b/qMkhhrme/wordle-julia-lima)
 
 ---
 
@@ -65,6 +65,8 @@
 
 #### Game Images and Videos Uploaded to: [uploadcare](uploadcare.com)
 
-#### Dictionary API:
+#### Random Words API: [Random Word API](http://random-word-api.herokuapp.com/home)
+
+#### Confetti JS Library: [github](https://github.com/Agezao/confetti-js)
 
 ---
