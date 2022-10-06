@@ -20,6 +20,23 @@ let close = document.querySelector('.close')
 let popUpMessage = document.querySelector('h4')
 let confettiFalling = document.querySelector('#my-canvas')
 
+const options = {
+  bottom: '32px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: '#fff',
+  backgroundColor: '#d3a4fc',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#d3a4fc',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+
+const darkmode = new Darkmode(options)
+darkmode.showWidget()
+
 let gameRows = [
   ['', '', '', '', '', ''],
   ['', '', '', '', '', ''],
