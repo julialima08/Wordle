@@ -14,7 +14,7 @@
 
 ### **_Description_**
 
-#### This is my own version of the popular game Wordle made with HTML, CSS, and vanilla Javascript. This game generates a random five letter word that the player must guess within six attempts.
+#### This is my own version of the popular game Wordle made with HTML, CSS, and vanilla Javascript. This game generates a random five letter word that the player must guess within six attempts. One thing that is different from the original wordle game is that my game has three levels. With each level, the word length grows progresively longer. I also added a dark theme so that players can costumize the styling of their game.
 
 ---
 
@@ -36,6 +36,8 @@
 
 ##### If one of the letters in your word is correct but not in its correct place, the tile will turn yellow.
 
+##### In dark mode, the green tiles become purple and the yellow tiles become dark blue.
+
 ##### You will have 6 chances to guess the randomized word. If you guess the word, you will move on to the next level. If you don't guess the word in 6 tries, you will have to start over with a new word.
 
 ---
@@ -44,20 +46,22 @@
 
 #### Screenshot of the game's look and layout
 
-![Page Layout]()
+![Level1](https://ucarecdn.com/474b179a-e59e-41fe-a334-9423866034a3/)
+
+![Level2](https://ucarecdn.com/362f5d48-4d89-4982-bbd5-9f97b0b4d43f/)
 
 #### Video of Game
 
-![Game Gif]()
+![Game Gif](https://ucarecdn.com/cdebf3fd-a73d-4a48-9673-6d700a419989/)
 
 ---
 
 ### **_Future Updates_**
 
-- [ ] Add dark mode/ different themes
-- [ ] Add levels with word difficulty increacing
+- [x] Add dark mode/ different themes
+- [x] Add levels with word difficulty increacing
 - [ ] Keep track of scores
-- [ ] Animation to the tiles when revealing guess accuracy
+- [x] Animation to the tiles when revealing guess accuracy
 
 ---
 
@@ -68,5 +72,7 @@
 #### Random Words API: [Random Word API](http://random-word-api.herokuapp.com/home)
 
 #### Confetti JS Library: [github](https://github.com/Agezao/confetti-js)
+
+#### Dark mode JS Library: [Dark mode JS Library](https://darkmodejs.learn.uno/)
 
 ---
